@@ -43,7 +43,9 @@ def find_afterparties():
     url = 'https://app.ticketmaster.com/discovery/v2/events'
     payload = {'apikey': API_KEY}
 
-    # TODO: Make a request to the Event Search endpoint to search for events
+    view_event_details = request.get(url)
+
+    # Make a request to the Event Search endpoint to search for events
     #
     # - Use form data from the user to populate any search parameters
     #
@@ -74,6 +76,7 @@ def get_event_details(id):
     """View the details of an event."""
 
     # TODO: Finish implementing this view function
+
 
     return render_template('event-details.html')
 
